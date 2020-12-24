@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,28 @@ export class AppComponent implements OnInit {
 
   salary=2500;
 
+
+  forminput = new FormGroup({
+    email : new FormControl('',[Validators.required,Validators.email]),
+    password : new FormControl('',Validators.required),
+    confirmpassword : new FormControl('',Validators.required),
+    
+    
+  });
+
+  // big form
+
+  employeeSigninForm = new FormGroup({
+    fullname: new FormControl(),
+    phone:new FormControl(),
+    address: new FormGroup({
+      codepostal: new FormControl(),
+      rue:new FormControl(),
+      town: new FormControl()
+    })
+  })
+
+
   constructor(){
     console.log("constructor");
     
@@ -43,6 +66,31 @@ export class AppComponent implements OnInit {
   }
 
 
+  submit(){
+    console.log(this.forminput);
+    
+    
+  }
+
+  checkForm(){
+    const password = this.forminput.value.password;
+    const cpassword = this.forminput.value.confirmpassword;
+    
+    if( this.forminput.valid  ){
+      if ( password == cpassword ) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+
+  check(){
+    const value = this.employeeSigninForm.value;
+    console.log(value);
+    
+  }
 
 
 

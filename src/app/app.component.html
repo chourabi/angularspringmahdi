@@ -15,9 +15,70 @@
 
 <p [innerHtml]="myPara" ></p> -->
 <!--<button  (click)="btnClick()" >{{txtButton}}  <span *ngIf="count != 0" >{{count}} times</span> </button>-->
-
+<!--
 <p> {{ today | date:'medium' }} </p>
 
 <p> {{ myTxt | hero:'hello':'hello2' }} </p>
 
-<h6>my salary = {{salary|currency:'TND '}}</h6>
+<h6>my salary = {{salary|currency:'TND '}}</h6> -->
+
+
+<!--
+<form [formGroup]="forminput" (ngSubmit)="submit()" >
+
+  <label for="">Email <span *ngIf="! forminput.controls.email.valid " class="req">*</span></label><br/>
+  <input type="text" formControlName="email" placeholder="type something" ><br/>
+  <p class="req" *ngIf="forminput.controls.email.dirty==false || forminput.value.email=='' "><small>this field is required</small></p>
+
+  <label for="">Password <span *ngIf="! forminput.controls.password.valid " class="req">*</span></label><br/>
+  <input type="password" formControlName="password" placeholder="type something" ><br/>
+  
+  <label for="">Confirm password <span *ngIf="! forminput.controls.confirmpassword.valid " class="req">*</span></label><br/>
+  <input type="password" formControlName="confirmpassword" placeholder="type something" ><br/>
+  
+  
+  
+  <button type="submit" [disabled]="checkForm()"  >SUBMIT</button>
+
+
+</form> -->
+
+
+<!--
+<form [formGroup]="employeeSigninForm" (ngSubmit)="check()" >
+
+  <input type="text" formControlName="fullname"><br/>
+  <input type="text" formControlName="phone"><br/>
+
+    <div formGroupName="address" >
+      <input type="text" formControlName="codepostal"><br/>
+      <input type="text" formControlName="rue"><br/>
+      <input type="text" formControlName="town"><br/>
+    </div>
+
+  <button type="submit">CHECK</button>
+
+</form>-->
+
+
+<!-- composant -->
+
+<div class="fluid-container">
+  <app-navbar></app-navbar>
+
+  <div class="row" style="margin-top: 80px;">
+    <div class="col-sm-3">
+      <app-sidemenu></app-sidemenu>
+    </div>
+    <div class="col-sm-9">
+      <app-panel></app-panel>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <app-footer></app-footer>
+    </div>
+  </div>
+
+</div>
