@@ -8,21 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class SidemenuComponent implements OnInit {
 
   categorys = [
-    'Moto',
-    'Vehicule',
-    'Velo',
-    'Loisir',
-    'Menage',
-    'etc',
-    'sport',
-    'Moto',
-    'Moto',
-    'Moto',
-    'Moto',
-    'Moto',
-    'Moto',
-    'Moto',
-    'Moto',
+    {
+      label:'Moto',
+      path:'/home/moto'
+    },
+    {
+      label:'Vehicule',
+      path:'/home/car'
+    }
     
     
   ];

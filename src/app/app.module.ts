@@ -10,6 +10,11 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { ProductComponent } from './product/product.component';
 import { PanelComponent } from './panel/panel.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
+import { MarkpageComponent } from './markpage/markpage.component';
+import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
+import { MotoshowComponent } from './motoshow/motoshow.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { FooterComponent } from './footer/footer.component';
     SidemenuComponent,
     ProductComponent,
     PanelComponent,
-    FooterComponent
+    FooterComponent,
+    HomepageComponent,
+    AboutpageComponent,
+    MarkpageComponent,
+    NotfoundpageComponent,
+    MotoshowComponent
   ],
   imports: [
     BrowserModule,
